@@ -2,7 +2,7 @@
 Android application made for participating in an online coding challenge conducted by Hackearth
 
 
-##Basic description on the app
+## Basic description on the app
 The "Hackearth News" android app is an app to view , read and interact with the newsfeeds coming from any server. 
 This app will load the source url of the news in a browser window which is implemented within the app, giving better user experience.
 
