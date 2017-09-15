@@ -29,7 +29,7 @@ import hackearth.com.hackearthtest.model.NewsModel;
 
 public class AppContext {
 
-    public static final String HACKEARTH_API_URL = "http://starlord.hackerearth.com/newsjson";
+    public static final String HACKEARTH_API_URL = "https://api.myjson.com/bins/12sapp";
 
 
     private static String TAG = AppContext.class.getName();
