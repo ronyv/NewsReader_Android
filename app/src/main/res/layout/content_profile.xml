@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/llMyProfileLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civMyPhoto"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/my_photo"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Name"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rony Varghese P"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Email"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="rony140007@gmail.com"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Mobile"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+91 7358744457"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Projects"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="VisiRx, myCliniq"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Technology"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Java, Android, PHP, angularJs"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Experience"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3 years"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1">
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_horizontal"
+                android:text="Company"/>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center_horizontal"
+                android:text=":"/>
+
+            <hackearth.com.hackearthtest.font.MediumFont
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="VisiRx Technologies private limited"
+                android:layout_weight="0.5"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

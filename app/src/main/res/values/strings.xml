@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Hackearth News</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_offline_mode">Offline Mode</string>
+    <string name="text_favorites">Favorites</string>
+    <string name="text_newsfeed">News</string>
+    <string name="text_myprofile">Portfolio</string>
+</resources>
