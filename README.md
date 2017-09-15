@@ -6,6 +6,9 @@ Android application made for participating in an online coding challenge conduct
 The "Hackearth News" android app is an app to view , read and interact with the newsfeeds coming from any server. 
 This app will load the source url of the news in a browser window which is implemented within the app, giving better user experience.
 
+## APK file : 
+You can download the apk file directly from the following dropbox link : https://www.dropbox.com/s/gczzr2dyrowx4k3/NewsReader.apk?dl=0
+
 ## Major functional implementations 
 
   1. Fetch, parse JSON data from a server url (https://api.myjson.com/bins/12sapp) and display it as a listview.
