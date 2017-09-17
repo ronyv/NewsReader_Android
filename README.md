@@ -6,7 +6,7 @@ Android application made for participating in an online coding challenge conduct
 The "Hackearth News" android app is an app to read and interact with the newsfeeds coming from a server. 
 
 ## APK file : 
-You can download the apk file directly from the following dropbox link : https://www.dropbox.com/s/gczzr2dyrowx4k3/NewsReader.apk?dl=0
+You can download the apk file directly from the following dropbox link : https://www.dropbox.com/s/184gmou2bbxie05/NewsReader.apk?dl=0
 
 ## Major functional implementations 
 
