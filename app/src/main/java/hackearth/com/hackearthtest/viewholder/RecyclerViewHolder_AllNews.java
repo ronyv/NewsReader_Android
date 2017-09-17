@@ -21,9 +21,9 @@ public class RecyclerViewHolder_AllNews extends RecyclerView.ViewHolder {
     //ui elements
     public MediumFont mfTitleString;
     public NormalFont nfPublisher, nfCategory,nfHostName,nfTimestamp;
-    public ImageView civFavorite;
+    public ImageView ivFavorite;
     public CardView cvNewsData;
-    public CircleImageView civLogoImage;
+    public ImageView ivLogoImage;
     public ImageView ivMainImage;
 
 
@@ -37,9 +37,9 @@ public class RecyclerViewHolder_AllNews extends RecyclerView.ViewHolder {
         nfCategory = (NormalFont) convertView.findViewById(R.id.nfCategory);
         nfHostName = (NormalFont) convertView.findViewById(R.id.nfHostName);
         nfTimestamp = (NormalFont) convertView.findViewById(R.id.nfTimestamp);
-        civFavorite = (ImageView) convertView.findViewById(R.id.civFavorite);
+        ivFavorite = (ImageView) convertView.findViewById(R.id.ivFavorite);
         cvNewsData = (CardView) convertView.findViewById(R.id.cvNewsData);
-        civLogoImage = (CircleImageView) convertView.findViewById(R.id.civLogoImage);
+        ivLogoImage = (ImageView) convertView.findViewById(R.id.ivLogoImage);
 
         convertView.setTag(this);
 

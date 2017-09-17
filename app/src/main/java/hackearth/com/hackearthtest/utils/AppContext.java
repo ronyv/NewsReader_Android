@@ -11,6 +11,10 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.util.Patterns;
 
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -40,6 +44,8 @@ public class AppContext {
 
     public static ArrayList<String> categoryList = null;
 
+    public static ArrayList<NewsModel> favoriteNewsList = null;
+
 
     public static HashMap<String, ArrayList<NewsModel>> publisherMap = null;
     public static HashMap<String, ArrayList<NewsModel>> categoryMap = null;
@@ -47,9 +53,17 @@ public class AppContext {
 
     public static String NO_INTERNET = "No Internet";
     public static String ALL_NEWS_BROADCAST = "all_news_broadcast";
+    public static String NEWS_FRAGMENT_BROADCAST = "news_fragment_broadcast";
     public static String NO_NEWS = "No News found !!";
     public static String NO_FAVORITE_NEWS = "No Favorite News found !!";
     public static String CUSTOM_ERROR_MESSAGE = "Something went wrong. Please try later !!";
+
+    public static String KEY_LIST_POSITION = "POSITION";
+    public static String KEY_NEWS_LIST = "NEWS_LIST";
+    public static String VALUE_LIST_ALL = "ALL";
+    public static String VALUE_LIST_FAVOURITES = "FAVOURITE";
+    public static int VALUE_DEFAULT_POSITION = 0;
+
 
 
     public static boolean checkAvailability(Context context) {
@@ -173,4 +187,18 @@ public class AppContext {
         return possibleEmail;
     }
 
+
+    public static String getMetaTag(Document document, String attr) {
+        Elements elements = document.select("meta[name=" + attr + "]");
+        for (Element element : elements) {
+            final String s = element.attr("content");
+            if (s != null) return s;
+        }
+        elements = document.select("meta[property=" + attr + "]");
+        for (Element element : elements) {
+            final String s = element.attr("content");
+            if (s != null) return s;
+        }
+        return null;
+    }
 }

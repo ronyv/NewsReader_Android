@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ProgressBar pbLoadNews;
     private TextView tvErrorMessage;
     private static LinearLayoutManager mLayoutManager;
-    private static RecyclerAdapter_All_News allNewsAdapter;
-    private RecyclerAdapter_Favorite_News favoriteNewsAdapter;
+    public static RecyclerAdapter_All_News allNewsAdapter;
+    public static RecyclerAdapter_Favorite_News favoriteNewsAdapter;
 
     private Button btnPublisher, btnCategory, btnSortByTime;
 
@@ -305,11 +305,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(AppContext.favoriteNewsMap != null && AppContext.favoriteNewsMap.size() > 0){
 
             //make the araylist of favorate items from the hashmap
-            ArrayList<NewsModel> favoriteNewsList = AppContext.ConvertMapToList(AppContext.favoriteNewsMap);
+            AppContext.favoriteNewsList = AppContext.ConvertMapToList(AppContext.favoriteNewsMap);
 
 
             //set the adapter
-            SetFavouriteNewsAdapter(favoriteNewsList);
+            SetFavouriteNewsAdapter(AppContext.favoriteNewsList);
 
 
 
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -371,7 +371,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_offline_mode) {
 
-            Toast.makeText(this, "Offline Mode Clicked", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Offline Mode Clicked", Toast.LENGTH_SHORT).show();
+
+            if(AppContext.allNewsList != null){
+
+                Intent newIntent = new Intent(MainActivity.this, VerticalScrollViewActivity.class);
+                newIntent.putExtra(AppContext.KEY_LIST_POSITION,AppContext.VALUE_DEFAULT_POSITION);
+                newIntent.putExtra(AppContext.KEY_NEWS_LIST,AppContext.VALUE_LIST_ALL);
+                startActivity(newIntent);
+
+            }else {
+                Toast.makeText(this, "Loading data...", Toast.LENGTH_SHORT).show();
+            }
+
             return true;
         }
 

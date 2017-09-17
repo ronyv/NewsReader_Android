@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import hackearth.com.hackearthtest.R;
+import hackearth.com.hackearthtest.VerticalScrollViewActivity;
 import hackearth.com.hackearthtest.WebViewActivity;
 import hackearth.com.hackearthtest.model.NewsModel;
 import hackearth.com.hackearthtest.utils.AppContext;
@@ -75,32 +76,34 @@ public class RecyclerAdapter_Favorite_News extends RecyclerView.Adapter<Recycler
         }
 
         if(dm.isFavorite()){
-            holder.civFavorite.setImageResource(R.drawable.ic_favorite_yellow);
+            holder.ivFavorite.setImageResource(R.drawable.ic_favorite_yellow);
         }else{
-            holder.civFavorite.setImageResource(R.drawable.ic_favorite_white);
+            holder.ivFavorite.setImageResource(R.drawable.ic_favorite_white);
         }
 
 
-        holder.civFavorite.setOnClickListener(new View.OnClickListener() {
+        holder.ivFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if(dm.isFavorite()){
                     //remove the item from the favourates list
                     AppContext.removeFromFavoriteList(dm.getID());
-                    holder.civFavorite.setImageResource(R.drawable.ic_favorite_white);
+                    holder.ivFavorite.setImageResource(R.drawable.ic_favorite_white);
 
                     //update the list
                     AppContext.allNewsList.get(position).setFavorite(false);
                 }else{
                     //add the item to the favourates list
                     AppContext.addToFavoriteList(dm.getID(),dm);
-                    holder.civFavorite.setImageResource(R.drawable.ic_favorite_yellow);
+                    holder.ivFavorite.setImageResource(R.drawable.ic_favorite_yellow);
 
                     //update the list
                     AppContext.allNewsList.get(position).setFavorite(true);
 
                 }
+
+                //AppContext.favoriteNewsList = AppContext.ConvertMapToList(AppContext.favoriteNewsMap);
             }
         });
 

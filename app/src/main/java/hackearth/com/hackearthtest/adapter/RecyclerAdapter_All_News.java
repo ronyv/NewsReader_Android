@@ -14,6 +14,7 @@ import com.google.android.gms.analytics.Tracker;
 
 import java.util.ArrayList;
 import hackearth.com.hackearthtest.R;
+import hackearth.com.hackearthtest.VerticalScrollViewActivity;
 import hackearth.com.hackearthtest.WebViewActivity;
 import hackearth.com.hackearthtest.model.NewsModel;
 import hackearth.com.hackearthtest.utils.AppContext;
@@ -74,32 +75,18 @@ public class RecyclerAdapter_All_News extends RecyclerView.Adapter<RecyclerViewH
             holder.nfTimestamp.setText(String.valueOf(time));
 
 
-            //fetching the main image and logo image from the url's using Jsoup
-/*
-
-            try{
-                Log.d("SPIN", "Insdie adapter : calling provider - "+dm.getHOSTNAME());
-                JsoupUrlContentProvider urlContentProvider = new JsoupUrlContentProvider(context);
-                urlContentProvider.setContentsToUi(holder.civLogoImage, "http://"+dm.getHOSTNAME());
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-*/
-
-
-
         }catch (Exception e){
             e.printStackTrace();
         }
 
         if(dm.isFavorite()){
-            holder.civFavorite.setImageResource(R.drawable.ic_favorite_yellow);
+            holder.ivFavorite.setImageResource(R.drawable.ic_favorite_yellow);
         }else{
-            holder.civFavorite.setImageResource(R.drawable.ic_favorite_white);
+            holder.ivFavorite.setImageResource(R.drawable.ic_favorite_white);
         }
 
 
-        holder.civFavorite.setOnClickListener(new View.OnClickListener() {
+        holder.ivFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -111,19 +98,21 @@ public class RecyclerAdapter_All_News extends RecyclerView.Adapter<RecyclerViewH
                 if(dm.isFavorite()){
                     //remove the item from the favourates list
                     AppContext.removeFromFavoriteList(dm.getID());
-                    holder.civFavorite.setImageResource(R.drawable.ic_favorite_white);
+                    holder.ivFavorite.setImageResource(R.drawable.ic_favorite_white);
 
                     //update the list
                     AppContext.allNewsList.get(position).setFavorite(false);
                 }else{
                     //add the item to the favourates list
                     AppContext.addToFavoriteList(dm.getID(),dm);
-                    holder.civFavorite.setImageResource(R.drawable.ic_favorite_yellow);
+                    holder.ivFavorite.setImageResource(R.drawable.ic_favorite_yellow);
 
                     //update the list
                     AppContext.allNewsList.get(position).setFavorite(true);
 
                 }
+
+                AppContext.favoriteNewsList = AppContext.ConvertMapToList(AppContext.favoriteNewsMap);
             }
         });
 
@@ -133,45 +122,19 @@ public class RecyclerAdapter_All_News extends RecyclerView.Adapter<RecyclerViewH
 
                // Toast.makeText(context, "go to page : "+ dm.getURL(), Toast.LENGTH_SHORT).show();
 
-                Intent myIntent = new Intent(context, WebViewActivity.class);
+                Intent newIntent = new Intent(context, VerticalScrollViewActivity.class);
+                newIntent.putExtra(AppContext.KEY_LIST_POSITION,position);
+                newIntent.putExtra(AppContext.KEY_NEWS_LIST,AppContext.VALUE_LIST_ALL);
+                context.startActivity(newIntent);
+
+               /* Intent myIntent = new Intent(context, WebViewActivity.class);
                 myIntent.putExtra("URL",dm.getURL());
                 myIntent.putExtra("PUBLISHER",dm.getPUBLISHER());
-                context.startActivity(myIntent);
+                context.startActivity(myIntent);*/
+
+
             }
         });
-/*
-
-        Picasso.with(context)
-                .load(HTTPUtils.gURLBase+dm.getAuthorProfileImgThumbUrl())
-                .placeholder(R.drawable.default_image)
-                .error(R.drawable.default_image)
-                .fit()
-                .into(holder.authorCircleImage);
-*/
-
-/*
-
-        holder.cvPostData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(!dm.isDataPending()){
-                    AppContext.selectedPostModel = dm;
-                }
-
-
-                Intent myIntent = new Intent(context, PostFullScreenActivity.class);
-                myIntent.putExtra(VTConstants.KEY_POST_ID, dm.getPostId());
-                myIntent.putExtra(VTConstants.KEY_IS_DATA_PENDING, dm.isDataPending());
-                context.startActivity(myIntent);
-
-
-
-                // Toast.makeText(context, "PostId : "+ dm.getPostId()+" ||  isdatapending? = "+ dm.isDataPending(), Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
-
 
         /** code for animation to the recycler list view - STARTS **/
 

@@ -24,6 +24,10 @@ public class NewsModel {
 
     private Date timestampDate;
 
+    private boolean isUrlDataFetched;
+    private String imageUrl;
+    private String urlDescription;
+
 
 
     public static Comparator<NewsModel> COMPARE_BY_TIME_ASC = new Comparator<NewsModel>() {
@@ -110,5 +114,29 @@ public class NewsModel {
 
     public void setTimestampDate(Date timestampDate) {
         this.timestampDate = timestampDate;
+    }
+
+    public boolean isUrlDataFetched() {
+        return isUrlDataFetched;
+    }
+
+    public void setUrlDataFetched(boolean urlDataFetched) {
+        isUrlDataFetched = urlDataFetched;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getUrlDescription() {
+        return urlDescription;
+    }
+
+    public void setUrlDescription(String urlDescription) {
+        this.urlDescription = urlDescription;
     }
 }

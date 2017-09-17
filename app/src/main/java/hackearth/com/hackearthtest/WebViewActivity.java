@@ -135,8 +135,6 @@ public class WebViewActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-
-
         mTracker.setScreenName("Email : "+AppContext.getPrimaryAccount(WebViewActivity.this)+" - Activity  : " + WebViewActivity.class.getName());
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 

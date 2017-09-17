@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".VerticalScrollViewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/curved_edge_shape">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <hackearth.com.hackearthtest.font.MediumFont
+                    android:id="@+id/mfNewsHeading"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.9"
+                    android:layout_height="wrap_content"
+                    android:text="Heading goes here..."
+                    android:layout_marginLeft="2dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+
+                <ImageView
+                    android:id="@+id/ivFavorite"
+                    android:layout_width="0dp"
+                    android:scaleType="fitCenter"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_favorite_yellow"
+                    android:layout_gravity="right"
+                    android:layout_weight="0.1"/>
+
+            </LinearLayout>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:id="@+id/nfHostName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="italic"
+                android:text="Host Name"/>
+
+
+            <ImageView
+                android:id="@+id/ivUrlImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_placeholder"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <hackearth.com.hackearthtest.font.NormalFont
+                    android:id="@+id/nfPublisher"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11dp"
+                    android:text="Publisher : The Times of India"/>
+
+                <hackearth.com.hackearthtest.font.NormalFont
+                    android:id="@+id/nfTimestamp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="11dp"
+                    android:gravity="right"
+                    android:text="08/10/2017 11:23 AM"/>
+
+            </LinearLayout>
+
+            <hackearth.com.hackearthtest.font.NormalFont
+                android:id="@+id/nfContentDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:textSize="16dp"
+                android:text="Loading..."/>
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnGoToWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to website"
+            android:layout_margin="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

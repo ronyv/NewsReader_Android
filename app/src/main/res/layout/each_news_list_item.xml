@@ -29,11 +29,12 @@
                 android:orientation="horizontal"
                 android:weightSum="1">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/civLogoImage"
+                <ImageView
+                    android:id="@+id/ivLogoImage"
                     android:layout_width="0dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_updates"
+                    android:scaleType="fitCenter"
                     android:layout_gravity="top"
                     android:layout_weight="0.1"
                     android:visibility="visible"/>
@@ -95,7 +96,7 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/civFavorite"
+                    android:id="@+id/ivFavorite"
                     android:layout_width="0dp"
                     android:scaleType="fitCenter"
                     android:layout_height="30dp"
